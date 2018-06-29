@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/note_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.jerry.mvpandroid_master.view.TitleView
+            android:layout_width="match_parent"
+            app:titleBackground="#e94715"
+            app:titileTextSize="18"
+            app:titleName="mvp开发"
+            android:layout_height="wrap_content">
+
+        </com.example.jerry.mvpandroid_master.view.TitleView>
+
+        <com.jude.easyrecyclerview.EasyRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E5E5E5"
+            app:scrollbars="none" />
+    </LinearLayout>
+</layout>
