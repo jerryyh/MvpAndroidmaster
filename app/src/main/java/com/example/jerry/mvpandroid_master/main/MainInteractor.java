@@ -1,6 +1,6 @@
 package com.example.jerry.mvpandroid_master.main;
 
-import com.example.jerry.mvpandroid_master.SubjectPostApi;
+import com.example.jerry.mvpandroid_master.SubjectApi;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.ApiException;
 
 /**
@@ -26,5 +26,5 @@ public interface MainInteractor {
         void onError(ApiException e);
     }
 
-    void getDataResult(OnGetDataResultFinishListener listenter, SubjectPostApi baseApi, MainActivity rxAppCompatActivity);
+    void getDataResult(OnGetDataResultFinishListener listenter, SubjectApi baseApi, MainActivity rxAppCompatActivity);
 }

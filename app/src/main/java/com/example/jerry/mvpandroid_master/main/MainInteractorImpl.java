@@ -1,10 +1,9 @@
 package com.example.jerry.mvpandroid_master.main;
 import android.os.Handler;
 
-import com.example.jerry.mvpandroid_master.SubjectPostApi;
+import com.example.jerry.mvpandroid_master.SubjectApi;
 import com.google.gson.Gson;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.ApiException;
-import com.wzgiceman.rxretrofitlibrary.retrofit_rx.http.HttpManager;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.listener.HttpOnNextListener;
 
 import java.util.ArrayList;
@@ -16,7 +15,7 @@ import java.util.List;
  */
 public class MainInteractorImpl implements MainInteractor,HttpOnNextListener {
     @Override
-    public void getDataResult(final OnGetDataResultFinishListener listener, SubjectPostApi baseApi,MainActivity rxAppCompatActivity) {
+    public void getDataResult(final OnGetDataResultFinishListener listener, SubjectApi baseApi, MainActivity rxAppCompatActivity) {
         new Handler().postDelayed(new Runnable() {
             @Override public void run() {
                 Gson gson = new Gson();

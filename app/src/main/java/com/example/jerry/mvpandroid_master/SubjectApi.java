@@ -10,7 +10,7 @@ import rx.Observable;
  * 测试数据
  * Created by Jerry on 2017/4/6.
  */
-public class SubjectPostApi extends BaseApi {
+public class SubjectApi extends BaseApi {
     //接口需要传入的参数 可自定义不同类型
     /*任何你先要传递的参数*/
     private int start;
@@ -38,7 +38,7 @@ public class SubjectPostApi extends BaseApi {
      * 可以额外设置请求设置加载框显示，回调等（可扩展）
      * 设置可查看BaseApi
      */
-    public SubjectPostApi() {
+    public SubjectApi() {
         setShowProgress(true);
         setCancel(true);
 //        setMothed("SSLJ_CORE_PLATFORM/circles/datatable");
@@ -47,7 +47,7 @@ public class SubjectPostApi extends BaseApi {
 
     @Override
     public Observable getObservable(Retrofit retrofit) {
-        HttpPostService service = retrofit.create(HttpPostService.class);
+        HttpService service = retrofit.create(HttpService.class);
         return service.getDatatable(getStart(), getAreaId());
     }
 }
