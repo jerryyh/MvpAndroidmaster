@@ -6,6 +6,6 @@ package com.wzgiceman.rxretrofitlibrary.retrofit_rx.utils;
  * @author Jerry
  */
 public class Constant {
-//    public static final String BASE_IP = "http://erp.sslj.com/";//发布IP
-public static final String BASE_IP="http://mappsns.lppz.com/services/";
+    public static final String BASE_IP = "http://erp.sslj.com/";//发布IP
+//public static final String BASE_IP="http://mappsns.lppz.com/services/";
 }
