@@ -9,14 +9,33 @@
         android:orientation="vertical">
 
         <com.example.jerry.mvpandroid_master.view.TitleView
+            android:id="@+id/title"
             android:layout_width="match_parent"
-            app:titleBackground="#e94715"
+            android:layout_height="wrap_content"
             app:titileTextSize="18"
-            app:titleName="mvp开发"
-            android:layout_height="wrap_content">
+            app:titleBackground="#e94715"
+            app:titleName="mvp开发">
 
         </com.example.jerry.mvpandroid_master.view.TitleView>
 
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="添加数据"
+            android:layout_gravity="center_horizontal" />
+        <Button
+            android:layout_margin="20dp"
+            android:id="@+id/button_socket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="socket通讯例子"
+            android:layout_gravity="center_horizontal" />
         <com.jude.easyrecyclerview.EasyRecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"

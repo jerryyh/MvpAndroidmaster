@@ -1,5 +1,6 @@
 package com.example.jerry.mvpandroid_master.main;
 
+import com.example.jerry.mvpandroid_master.IMyAidl;
 import com.example.jerry.mvpandroid_master.SubjectApi;
 import com.wzgiceman.rxretrofitlibrary.retrofit_rx.exception.ApiException;
 
@@ -29,6 +30,11 @@ public class MainPresenterImpl implements MainPresenter, MainInteractor.OnGetDat
     }
 
     @Override
+    public void showText(String s) {
+        mainView.showText(s);
+    }
+
+    @Override
     public void onResume(MainActivity mainActivity) {
         if (mainView != null) mainView.showLoadingDialog();
         SubjectApi postEntity = new SubjectApi();
@@ -50,5 +56,10 @@ public class MainPresenterImpl implements MainPresenter, MainInteractor.OnGetDat
         postEntity.setAreaId("");
         postEntity.setMothed("SSLJ_CORE_PLATFORM/circles/datatable" + "/" + 0);
         mainInteractor.getDataResult(this, postEntity, mainActivity);
+    }
+
+    @Override
+    public void getServiceData(IMyAidl mAidl) {
+        mainInteractor.getServiceData(mAidl,this);
     }
 }

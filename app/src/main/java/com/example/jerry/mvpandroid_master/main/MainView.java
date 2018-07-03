@@ -10,4 +10,5 @@ public interface MainView {
     void onError(ApiException e);
     void showLoadingDialog();
     void dialogDissmiss();
+    void showText(String s);
 }
